@@ -1,0 +1,16 @@
+def string_frame(word):
+    header = '**' + '*' * len(word) + '**'
+    for item in word:
+        k = '* ' + item + ' *'
+        if len(k) > len(header):
+            header = '*' * len(k)
+            print(header)
+            print(k)
+        else:
+            k = '* ' + item + ' ' * (len(header) - len(k)) + ' *'
+            print(k)
+    print(header)
+#test = ['Hello','World','in','a','frame']
+#string_frame(test)
+test_2 = ['yay','i\'m','doing','it']
+string_frame(test_2)
